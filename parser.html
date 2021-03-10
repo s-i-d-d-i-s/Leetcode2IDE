@@ -1,0 +1,129 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism-tomorrow.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/plugins/line-highlight/prism-line-highlight.min.css">
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+    
+    <script src="assets/js/codemirror/lib/codemirror.js"></script>
+    <link rel="stylesheet" href="assets/js/codemirror/lib/codemirror.css">
+    <script src="assets/js/codemirror/mode/clike/clike.js"></script>
+    <script src="assets/js/codemirror/mode/python/python.js"></script>
+    <script src="assets/js/codemirror/mode/css/css.js"></script>
+    <link rel="stylesheet" href="assets/js/codemirror/theme/monokai.css">
+    <link rel="stylesheet" href="assets/js/codemirror/theme/dracula.css">
+    <script src="assets/js/codemirror/addon/edit/matchbrackets.js"></script>
+    <script src="assets/js/codemirror/addon/edit/closebrackets.js"></script    >
+    <title>Parser</title>
+	<style>
+	.CodeMirror {
+font-size: 16px;
+}
+	</style>
+</head>
+<body >
+
+    <header class="site-header">
+      <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+        <div class="container">
+          <a class="navbar-brand mr-4" href="index.html">Leetcode2IDE</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarToggle">
+            <div class="navbar-nav mr-auto">
+              <a class="nav-item nav-link" href="index.html">Home</a>
+              <a class="nav-item nav-link" href="parser.html">Parse Task</a>
+            </div>
+
+          </div>
+        </div>
+      </nav>
+    </header>
+
+
+<div class="container">
+    <h3 class="text">Paste Page Source</h3>
+        <hr class="hr-primary" />
+    <div class="row">
+        <div class="col-md-12 pt-3">
+            
+                <input type="hidden" name="csrfmiddlewaretoken" value="roeeF50qMKmo7tXeQiX84YNTuib6rmV5lFGXmMrykiBY8MTbjm1c4e5MwEkltRv3">
+                <button type="submit" class="btn btn-success" style="margin-bottom: 10px;" onclick="compileNow()">Parse </button>
+				<button type="submit" class="btn btn-success" style="margin-bottom: 10px;" onclick="resetNow()">Reset </button>
+                <img id="compiling_loader" src="/static/main/compiling.gif" style="display:none;width: 40px; height: 50px; padding-bottom: 10px;">
+
+				<textarea type="text" name="textfield" class="mt-3" style="width: 100%;" rows="50" id="editor">// Hello !,Paste Your Page Source</textarea>
+            
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+    
+
+<script>
+    function compileNow(){
+		run();
+    }
+	function resetNow(){
+		editor.setValue("");
+    }
+
+
+    var editor = CodeMirror.fromTextArea(document.getElementById('editor'),{
+        mode: "text/x-c++src",
+        theme: "monokai",
+        autoCloseBrackets: true,
+        lineNumbers: true,
+        matchBrackets: true,
+        smartIndent: true,
+        indentWithTabs: true,
+        indentUnit: 4
+    });
+    editor.setSize(1110, 500);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="page-footer font-small teal pt-1 fixed-bottom" id="baseFooter">
+      <div class="footer-copyright text-center py-2">© 2020 Copyright: Siddharth Singh </div>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/components/prism-cpp.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="assets/js/main.js"></script>
+</body>
+</html>

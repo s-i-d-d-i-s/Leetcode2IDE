@@ -1,0 +1,178 @@
+body {
+  background: #fafafa;
+  color: #333333;
+  margin-top: 5rem;
+  position: auto;
+  min-height: 400px;
+  margin-bottom: 100px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #444444;
+}
+
+.list-group-item{
+    background-color: #fafafa;
+
+}
+
+ul {
+  margin: 0;
+}
+
+
+#headJumb{
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  min-height: 15em;
+}
+
+.bg-steel {
+  background-color: #009688;
+}
+
+.site-header .navbar-nav .nav-link {
+  color: #fff;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  background: #03ac9c;
+  color: #fff;
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+}
+
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}le-title {
+  color: #444444;
+}
+
+
+a.article-title:hover {
+  color: #428bca;
+  text-decoration: none;
+}
+
+.article-content {
+  white-space: pre-line;
+  color: black;
+}
+#detailpost{
+  white-space: pre-line;
+  overflow: auto;
+  height: auto;
+}
+.codes{
+  display: inline-block;
+  overflow: hidden !important;
+  font-size: 12px !important;
+  height: 10em;
+  width: 100%;
+}
+
+.article-img {
+  height: 65px;
+  width: 65px;
+  margin-right: 16px;
+}
+
+.article-metadata {
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #e3e3e3
+}
+
+.article-metadata a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.article-svg {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.account-heading {
+  font-size: 2.5rem;
+}
+
+footer{
+    background-color: #009688;
+    color: #fff;
+}
+
+#foot_h5{
+    color: #fff;
+}
+
+.footer_text{
+  text-decoration-style: none;
+  color: #fff
+}
+.footer_text:active{
+  text-decoration-style: none;
+  color: #fff
+}
+.footer_text:hover{
+  text-decoration-style: none;
+  color: #fff
+}
+@media screen and (max-device-width:700px) {
+  #headJumb{
+    display: none !important;
+  }
+}
+
+@media screen and (max-device-width: 1040px) {
+    #usercard{
+        display: none !important;
+    }
+    #postTitle{
+        font-size: 1.5em !important;
+    }
+    #ProfileName{
+        font-size: 1.5em !important;
+    }
+}
+
+@media screen and (max-device-width: 390px) {
+  #headJumb{
+    display: none !important;
+  }
+  #normalSizeShare{
+    display: none;
+  }
+  #smallSizeShare{
+    display: initial !important;
+  }
+  #homePostTick{
+    display: none;
+  }
+  #baseFooter{
+    display: none;
+  }
+}
